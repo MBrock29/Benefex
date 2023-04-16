@@ -1,9 +1,9 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 
 export interface StarWarsCharacters {
   url: string;
   name: string;
-  avatar?: HTMLImageElement;
+  avatar: HTMLImageElement;
   gender: string;
   birth_year: string;
   count?: number;
@@ -17,4 +17,7 @@ export const getCharacters = async (
     .get(
       `${process.env.REACT_APP_BENEFEX_API_URL}/people/?search=${searchTerm}&page=${page}`
     )
-    .then((res) => ({ characters: res.data.results, count: res.data.count }));
+    .then((res: AxiosResponse) => ({
+      characters: res.data.results,
+      count: res.data.count,
+    }));

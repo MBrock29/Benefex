@@ -1,9 +1,9 @@
-import axios from "axios";
+import axios, { AxiosResponse } from "axios";
 
 export interface StarWarsStarships {
   id: number;
   name: string;
-  avatar?: HTMLImageElement;
+  avatar: HTMLImageElement;
   crew: string;
   passengers: string;
 }
@@ -13,4 +13,4 @@ export const getStarships = (): Promise<StarWarsStarships[]> =>
     .get(
       `${process.env.REACT_APP_BENEFEX_API_URL}/starships/?search=Millennium Falcon`
     )
-    .then((res) => res.data.results);
+    .then((res: AxiosResponse) => res.data.results);
