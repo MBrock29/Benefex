@@ -1,0 +1,35 @@
+@import "../styles/Colors.scss";
+@import "../styles/Variables.scss";
+
+.container {
+  width: calc(150px + $space-normal);
+  height: fit-content;
+  background-color: $dark-blue;
+  padding: $space-normal;
+  margin: $space-mega;
+  justify-content: center;
+  align-items: center;
+  border-radius: $x2;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.gender {
+  color: $grey;
+}
+.birth_year {
+  color: $green;
+}
+
+.image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+h4,
+p {
+  margin: $space-nano;
+}

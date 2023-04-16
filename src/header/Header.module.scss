@@ -1,0 +1,29 @@
+@import "../styles/Colors.scss";
+@import "../styles/Variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.launchButton {
+  background-color: #6188ff;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  font-size: 1.25rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  &:hover {
+    background-color: #4a6fd0;
+  }
+}

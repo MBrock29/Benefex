@@ -6,9 +6,15 @@ export interface StarWarsCharacters {
   avatar?: HTMLImageElement;
   gender: string;
   birth_year: string;
+  count?: number;
 }
 
-export const getCharacters = (): Promise<StarWarsCharacters[]> =>
+export const getCharacters = async (
+  searchTerm: string,
+  page: number
+): Promise<{ characters: StarWarsCharacters[]; count: number }> =>
   axios
-    .get(`${process.env.REACT_APP_BENEFEX_API_URL}/people`)
-    .then((res) => res.data.results);
+    .get(
+      `${process.env.REACT_APP_BENEFEX_API_URL}/people/?search=${searchTerm}&page=${page}`
+    )
+    .then((res) => ({ characters: res.data.results, count: res.data.count }));

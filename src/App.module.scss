@@ -1,0 +1,121 @@
+@import "./styles/Colors.scss";
+@import "./styles/Variables.scss";
+
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark;
+  color: $white;
+  width: 100%;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  @media (max-width: $small) {
+    flex-direction: column;
+  }
+}
+
+.rightSection {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $dark-blue;
+  min-width: calc(50% - #{$space-normal});
+  overflow-y: auto;
+}
+
+.leftSection {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: $space-normal;
+  min-width: calc(50% - #{$space-normal});
+}
+
+.crewSection,
+.passengersSection {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  min-height: 100%;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.crewSection {
+  background-color: $green;
+}
+
+.passengersSection {
+  background-color: $purple;
+}
+.sectionTitle {
+  font-size: 24px;
+  margin-bottom: $space-normal;
+}
+
+.header {
+  text-align: center;
+  top: 0;
+  background-color: $dark;
+  width: 100%;
+
+  h1 {
+    @media (max-width: $tablet) {
+      font-size: 22px;
+    }
+    @media (max-width: $phone) {
+      font-size: 18px;
+      padding: 0 $space-normal;
+    }
+  }
+}
+
+.input {
+  width: 300px;
+  height: 40px;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 18px;
+  margin: $space-normal;
+}
+
+.pagination {
+  display: flex;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+
+  flex: 1;
+}
+
+.headerContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: $space-nano;
+  margin-left: 260px;
+  @media (max-width: $small) {
+    flex-direction: column;
+    margin-left: 0;
+  }
+}

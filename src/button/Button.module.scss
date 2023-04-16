@@ -1,0 +1,39 @@
+@import "../styles/Colors.scss";
+@import "../styles/Variables.scss";
+
+button {
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 12px;
+  padding: $space-nano;
+  margin: $space-nano;
+  color: $white;
+  margin-left: 0;
+  &:disabled {
+    opacity: 0.4;
+    pointer-events: none;
+  }
+}
+
+.primary {
+  background: $green;
+  border: 2px solid $green;
+  &:hover {
+    background: $white;
+    border: 2px solid $green;
+    color: $green;
+  }
+}
+
+.secondary {
+  background: $purple;
+  border: 2px solid $purple;
+  &:hover {
+    background: $white;
+    border: 2px solid $purple;
+    color: $purple;
+  }
+}
